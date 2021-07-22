@@ -1,4 +1,3 @@
-
 import '../../image.dart' show Point;
 import '../image.dart';
 
@@ -29,8 +28,8 @@ Image copyCrop(Image src, int x, int y, int w, int h) {
 /// Returns a round cropped copy of [src].
 Image copyCropCircle(
   Image src, {
-  int radius,
-  Point center,
+  int? radius,
+  Point? center,
 }) {
   int min(num x, num y) => (x < y ? x : y).toInt();
   final defaultRadius = min(src.width, src.height) ~/ 2;
@@ -62,4 +61,3 @@ Image copyCropCircle(
 
   return dst;
 }
-
